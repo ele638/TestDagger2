@@ -7,14 +7,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.testdagger2.Adapters.RandomUserAdapter;
-import com.example.testdagger2.Modules.ContextModule;
-import com.example.testdagger2.interfaces.DaggerRandomUsersComponent;
+import com.example.testdagger2.Modules.MainActivityModule;
+import com.example.testdagger2.interfaces.DaggerMainActivityComponent;
+import com.example.testdagger2.interfaces.MainActivityComponent;
 import com.example.testdagger2.interfaces.RandomUsersApi;
-import com.example.testdagger2.interfaces.RandomUsersComponent;
 import com.example.testdagger2.model.RandomUsers;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
+
+import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,9 +26,14 @@ import timber.log.Timber;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+
+    @Inject
     RandomUserAdapter mAdapter;
 
+    @Inject
     RandomUsersApi randomUsersApi;
+
+    @Inject
     Picasso picasso;
 
     @Override
@@ -35,12 +42,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
 
-        RandomUsersComponent component = DaggerRandomUsersComponent.builder()
-                .contextModule(new ContextModule(this))
+        MainActivityComponent component = DaggerMainActivityComponent.builder()
+                .mainActivityModule(new MainActivityModule(this))
+                .randomUsersComponent(RandomUserApplication.get(this).getRandomUsersApplicationComponent())
                 .build();
 
-        picasso = component.getPicasso();
-        randomUsersApi = component.getRandomUsersService();
+        component.injectMainActivity(this);
         populateUsers();
     }
 
