@@ -1,4 +1,4 @@
-package com.example.testdagger2;
+package com.example.testdagger2.Activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,11 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.testdagger2.Adapters.RandomUserAdapter;
+import com.example.testdagger2.Application.RandomUserApplication;
+import com.example.testdagger2.Interfaces.Components.DaggerMainActivityComponent;
+import com.example.testdagger2.Interfaces.Components.MainActivityComponent;
+import com.example.testdagger2.Interfaces.RandomUsersApi;
+import com.example.testdagger2.Models.RandomUsers;
 import com.example.testdagger2.Modules.MainActivityModule;
-import com.example.testdagger2.interfaces.DaggerMainActivityComponent;
-import com.example.testdagger2.interfaces.MainActivityComponent;
-import com.example.testdagger2.interfaces.RandomUsersApi;
-import com.example.testdagger2.model.RandomUsers;
+import com.example.testdagger2.R;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;

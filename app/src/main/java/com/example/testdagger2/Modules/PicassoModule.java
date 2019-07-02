@@ -2,8 +2,8 @@ package com.example.testdagger2.Modules;
 
 import android.content.Context;
 
-import com.example.testdagger2.interfaces.ApplicationContext;
-import com.example.testdagger2.interfaces.RandomUsersApplicationScope;
+import com.example.testdagger2.Interfaces.Scopes.ApplicationContext;
+import com.example.testdagger2.Interfaces.Scopes.RandomUsersApplicationScope;
 import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 

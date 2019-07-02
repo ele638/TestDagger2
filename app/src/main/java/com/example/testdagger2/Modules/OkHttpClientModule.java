@@ -2,7 +2,7 @@ package com.example.testdagger2.Modules;
 
 import android.content.Context;
 
-import com.example.testdagger2.interfaces.ApplicationContext;
+import com.example.testdagger2.Interfaces.Scopes.ApplicationContext;
 
 import org.jetbrains.annotations.NotNull;
 

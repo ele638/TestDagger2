@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.testdagger2.Models.Result;
 import com.example.testdagger2.R;
-import com.example.testdagger2.model.Result;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;

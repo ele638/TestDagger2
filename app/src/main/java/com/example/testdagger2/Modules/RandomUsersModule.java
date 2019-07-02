@@ -1,7 +1,7 @@
 package com.example.testdagger2.Modules;
 
-import com.example.testdagger2.interfaces.RandomUsersApi;
-import com.example.testdagger2.interfaces.RandomUsersApplicationScope;
+import com.example.testdagger2.Interfaces.RandomUsersApi;
+import com.example.testdagger2.Interfaces.Scopes.RandomUsersApplicationScope;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

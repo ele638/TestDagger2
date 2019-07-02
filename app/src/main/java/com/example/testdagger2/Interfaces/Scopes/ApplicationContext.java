@@ -1,4 +1,4 @@
-package com.example.testdagger2.interfaces;
+package com.example.testdagger2.Interfaces.Scopes;
 
 import javax.inject.Qualifier;
 

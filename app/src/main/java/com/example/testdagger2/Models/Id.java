@@ -1,5 +1,5 @@
 
-package com.example.testdagger2.model;
+package com.example.testdagger2.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

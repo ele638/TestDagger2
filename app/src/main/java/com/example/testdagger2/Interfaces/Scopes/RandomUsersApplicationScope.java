@@ -1,4 +1,4 @@
-package com.example.testdagger2.interfaces;
+package com.example.testdagger2.Interfaces.Scopes;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

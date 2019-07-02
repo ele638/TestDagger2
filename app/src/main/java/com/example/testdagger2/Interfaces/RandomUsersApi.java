@@ -1,6 +1,6 @@
-package com.example.testdagger2.interfaces;
+package com.example.testdagger2.Interfaces;
 
-import com.example.testdagger2.model.RandomUsers;
+import com.example.testdagger2.Models.RandomUsers;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
